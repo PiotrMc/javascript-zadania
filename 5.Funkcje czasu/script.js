@@ -21,3 +21,4 @@ while (i++<15) {
     let napis = "Cześć po raz "+i;
     setTimeout(() => console.log(napis), 1000*i)
 }
+
