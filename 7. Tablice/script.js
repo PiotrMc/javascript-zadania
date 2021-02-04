@@ -115,31 +115,60 @@ function avgMulArray(arrNum)
     return 0;
 }
 avgMulArray(tablica3);
-console.log("");
+console.log("**");
 
 
 
-/*
+//#### Zadanie 6
+//Napisz funkcję która zwraca średnią liczb parzystych z tablicy którą przekażesz jako parametr tej funkcji.
+
+function avgEvenArray(arrNum)
+{
+    let sum=0;
+    let count=0;
+
+    arrNum.forEach(element => 
+        {if (element%2==0) 
+            {
+            sum+=element;
+            count++;
+            }
+        })
+    let avgArray=sum/count;
+    return avgArray;
+}
+
+console.log(avgEvenArray(tablica3));
+
+console.log("=> 7.");
+
+//#### Zadanie 7
+//Posortuj tablicę przekazaną jako parametr do funkcji. Wypisz ją w konsoli
+
+function sortArray(arrNum)
+{
+//    arrNum.sort(); - alfabetycznie
+    arrNum.sort(function(a, b){return a - b});
+    arrNum.forEach (element => console.log(element));
+    return 0;
+}
+sortArray(tablica3);
 
 
+//#### Zadanie 8  
+//Napisz funkcję która będzie zwracać tablicę która będzie sumą indeksów dwóch tablic przekazanych jako parametry funkcji.
+
+// czym jest suma indeksów????
 
 
+//#### Zadanie 9
+//Napisz funkcję która przyjmuje jako parametr tablicę z numberami a następnie zwraca nową tablicę na podstawie parametru gdzie każdy element tablicy ma odwrotny znak.
 
+console.log("=>9.");
 
-#### Zadanie 6
-
-Napisz funkcję która zwraca średnią liczb parzystych z tablicy którą przekażesz jako parametr tej funkcji.
-
-#### Zadanie 7
-
-Posortuj tablicę przekazaną jako parametr do funkcji. Wypisz ją w konsoli
-
-#### Zadanie 8
-
-Napisz funkcję która będzie zwracać tablicę która będzie sumą indeksów dwóch tablic przekazanych jako parametry funkcji.
-
-#### Zadanie 9
-
-Napisz funkcję która przyjmuje jako parametr tablicę z numberami a następnie zwraca nową tablicę na podstawie parametru gdzie każdy element tablicy ma odwrotny znak.
-
-*/
+function negNumArray(arrNum)
+{
+    arrNum.forEach ((element,index) =>  arrNum[index]=element*-1);
+    return (arrNum);
+}
+negNumArray(tablica3).forEach (element => console.log(element));
