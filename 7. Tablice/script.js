@@ -168,7 +168,7 @@ function sumArrays(arrNum,arrNum2)
     arrNum.forEach ((element,index) =>  arrTmp.push(arrNum2[index]+element));
     return (arrTmp);
 }
-negNumArray(tablica3,tablica4).forEach (element => console.log(element));
+sumArrays(tablica3,tablica4).forEach (element => console.log(element));
 
 
 //#### Zadanie 9

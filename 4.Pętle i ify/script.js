@@ -6,6 +6,8 @@
 // potrzebne są albo dwie instrukcje if bez else, albo if - else if 
 // bo brak obsługi przypadku a==b
 
+let myOut="";
+
 let a = 50
 let b = 12
 
@@ -24,26 +26,26 @@ let c = 7;
 
 if (a>b) 
   {
-  if (a>c) writeln ("najwieksze jest a")
-  else writeln ("najwieksze jest c")
+  if (a>c) console.log ("najwieksze jest a")
+  else console.log ("najwieksze jest c")
   }
-else if (b>c) writeln ("najwieksze jest b")
-  else writeln ("najwieksze jest c");
+else if (b>c) console.log ("najwieksze jest b")
+  else console.log ("najwieksze jest c");
 
 //wersja druga, niespełniająca wymogow zadania (brak else if, a bez sensu wstawiać na siłę, ale obsługuje równe wartości)
 
-write ("największe jest:");
-if ((a >= b) && (a >= c)) write (" a");
-if ((b >= a) && (b >= c)) write (" b");
-if ((c >= a) && (c >= b)) write (" c");
-writeln ("");
+myOut ="największe jest:";
+if ((a >= b) && (a >= c)) myOut+=" a";
+if ((b >= a) && (b >= c)) myOut+=" b";
+if ((c >= a) && (c >= b)) myOut+=" c";
+console.log (myOut);
 
 
 
 //#### Zadanie 3
 //W konsoli stwórz pętle, która 10 razy wypisze w konsoli tekst "Lubię JavaScript".
 
-for (let i = 0; i < 10; i++) writeln ("Lubię JavaScript");
+for (let i = 0; i < 10; i++) console.log ("Lubię JavaScript");
 
 //#### Zadanie 4
 //W konsoli stwórz zmienną ```result``` i przypisz do niej liczbę 0. Następnie stwórz pętle, która doda do siebie liczby od 1 do 10.
@@ -69,9 +71,8 @@ var n = 5;
 
 for (let i = 0; i <= n ; i++) 
   {
-  write (i);
-  if ( i%2 == 0) writeln (" - parzysta")
-  else writeln (" - nieparzysta");
+  if ( i%2 == 0) console.log (i+" - parzysta")
+  else console.log (i+" - nieparzysta");
   }
 
 //wersja 2
@@ -79,7 +80,7 @@ for (let i = 0; i <= n ; i++)
 var n = 5;
 
 for (let i = 0; i <= n ; i++) 
-  writeln (i + (i%2 == 0?" - parzysta":" - nieparzysta"));
+  console.log (i + (i%2 == 0?" - parzysta":" - nieparzysta"));
 
 
 
@@ -106,18 +107,19 @@ Przykład:
 0 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz ....
 ```
 */
+myOut="";
 
 for (let i = 0; i <=100; i++)
   if (i!=0)
   {
   if (i % 3 == 0) 
-    if (i % 5 != 0) write (" Fizz")
-    else write (" Fizzbuzz") 
-  else if (i % 5 == 0 && i % 3 != 0) write (" Buzz") 
-  else write (" "+i);
+    if (i % 5 != 0) myOut+=" Fizz"
+    else myOut+=" Fizzbuzz" 
+  else if (i % 5 == 0 && i % 3 != 0) " Buzz"
+  else myOut+=" "+i;
   }
-  else write (" "+i);
-
+  else myOut+=" "+i;
+console.log(myOut);
 
 //#### Zadanie 8
 //Narysuj w konsoli:
@@ -135,9 +137,12 @@ a)
 
 for (let i = 1; i <= 5; i++)
   {
+  myOut="";
   for (let j=1; j <= i; j++)
-    write ("*");
-  writeln ("");
+    myOut+="*";
+//    write ("*");
+console.log(myOut);
+//  writeln ("");
   }
 
 /*
@@ -153,11 +158,15 @@ b)
 
 for (let i = 1; i <= 5; i++)
   {
+  myOut="";
   for (let j=1; j <= 5-i; j++)
-    write (" ");
+      myOut+=" ";
+//    write (" ");
   for (let j=1; j <= i; j++)
-    write ("* ");
-  writeln ("");
+      myOut+="* ";
+//    write ("* ");
+    console.log (myOut);
+//  writeln ("");
   }
 
   /*
