@@ -162,7 +162,7 @@ console.log("=>8.");
 
 let tablica4=[1,2,3,4,5,6];
 
-function sumArrays(arrNum,arrum2)
+function sumArrays(arrNum,arrNum2)
 {
     let arrTmp=[];
     arrNum.forEach ((element,index) =>  arrTmp.push(arrNum2[index]+element));
