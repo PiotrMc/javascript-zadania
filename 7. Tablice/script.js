@@ -158,7 +158,17 @@ sortArray(tablica3);
 //#### Zadanie 8  
 //Napisz funkcję która będzie zwracać tablicę która będzie sumą indeksów dwóch tablic przekazanych jako parametry funkcji.
 
-// czym jest suma indeksów????
+console.log("=>8.");
+
+let tablica4=[1,2,3,4,5,6];
+
+function sumArrays(arrNum,arrum2)
+{
+    let arrTmp=[];
+    arrNum.forEach ((element,index) =>  arrTmp.push(arrNum2[index]+element));
+    return (arrTmp);
+}
+negNumArray(tablica3,tablica4).forEach (element => console.log(element));
 
 
 //#### Zadanie 9
