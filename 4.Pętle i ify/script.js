@@ -182,11 +182,12 @@ c)
 
 for (let i = 1; i <= 9; i+=2)
   {
+  myOut="";
   for (let j=1; j <= 9-i; j+=2)
-    write (" ");
+    myOut+=" ";
   for (let j=1; j <= i; j++)
-    write ("*");
-  writeln ("");
+    myOut+="*";
+console.log(myOut);
   }
 
   /*
@@ -206,6 +207,23 @@ d)
 ```
 */
 
+for (let i = 1; i <= 5; i++)
+  {
+  myOut="";
+  for (let j=0; j < 5; j++)
+    myOut+=(i>j?"*":j);
+console.log(myOut);
+  }
+console.log("-----");
+  for (let i = 5; i >0; i--)
+  {
+  myOut="";
+  for (let j=0; j < 5; j++)
+    myOut+=(i>j?"*":j);
+console.log(myOut);
+  }
+
+
 /*
 e)
 ```
@@ -220,15 +238,16 @@ e)
 ```
 */
 
-for (let i = 1; i <= 9; i+=2)
+let ii=0;
+for (let i = 1; i <= 8; i++)
   {
-  for (let j=1; j <= 9-i; j+=2)
-    write (" ");
-  for (let j=1; j <= i; j++)
-    write ("*");
-  writeln ("");
+  myOut="";
+  ii=(i<6?i:1);
+  for (let j=1; j <= 5-ii; j++)
+      myOut+=" ";
+  for (let j=1; j <= ii; j++)
+      myOut+="* ";
+    console.log (`${myOut}`);
   }
 
-
-
-console.log("dsfds");
+console.log("\nkoniec");
