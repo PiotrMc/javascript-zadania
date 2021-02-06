@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\4.Pętle i ify\\script.js"
+            "program": "${workspaceFolder}\\8.Obiekty\\script.js"
         }
     ]
 }
